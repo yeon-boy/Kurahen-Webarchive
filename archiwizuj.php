@@ -6,6 +6,8 @@ $boards = array(
 	'pony', 'sci', 'sp', 'tech', 'thc', 'trv', 'v8', 'vg', 'wall', 'x', 'dew', 'g', 'hen', 's',
 	'int', 'kara', 'rs', '4'
 );
+$domain = 'karachan.org';
+
 
 $c = curl_init();
 curl_setopt($c, CURLOPT_AUTOREFERER, TRUE);
@@ -17,9 +19,9 @@ curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
 foreach ($boards as $board) {
 	for ($i = 0; $i <= 15; $i++) {
 		if ($i == 0) {
-			$url = 'https://web.archive.org/save/http://karachan.org/'. $board .'/';
+			$url = 'https://web.archive.org/save/http://'. $domain .'/'. $board .'/';
 		} else {
-			$url = 'https://web.archive.org/save/http://karachan.org/'. $board .'/'. $i .'.html';
+			$url = 'https://web.archive.org/save/http://'. $domain .'/'. $board .'/'. $i .'.html';
 		}
 
 		curl_setopt($c, CURLOPT_URL, $url);
