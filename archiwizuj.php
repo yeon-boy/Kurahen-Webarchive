@@ -12,7 +12,8 @@ $domain = 'karachan.org';
 $c = curl_init();
 curl_setopt($c, CURLOPT_AUTOREFERER, TRUE);
 curl_setopt($c, CURLOPT_FOLLOWLOCATION, TRUE);
-curl_setopt($c, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36');
+curl_setopt($c, CURLOPT_USERAGENT,
+	'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36');
 curl_setopt($c, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
 
